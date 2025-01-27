@@ -27,7 +27,7 @@ aria2.set_global_options(options)
 async def download_video(url, reply_msg, user_mention, user_id):
     try:
         # Fetch video details from the API
-        response = requests.get(f"https://rapidapi.com/pb068528/api/terabox-downloader-direct-download-link-generator2/pricing/?url={url}")
+        response = requests.get(f"https://terabox-downloader-direct-download-link-generator2.p.rapidapi.com/getDownloadLink?url={url}")
         response.raise_for_status()
         data = response.json()
 
